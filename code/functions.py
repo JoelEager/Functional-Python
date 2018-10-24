@@ -20,6 +20,9 @@ def decrement_more(value):
 
 
 def apply_function(funct, value, iterations):
+    """
+    Example of a function that takes another function as an argument
+    """
     for index in range(iterations):
         value = funct(value)
 
@@ -27,6 +30,9 @@ def apply_function(funct, value, iterations):
 
 
 def replace_decrement():
+    """
+    Replaces the decrement function with the decrement_more function
+    """
     global decrement
     decrement = decrement_more
 
@@ -36,7 +42,7 @@ def run_demo():
     print("Increment:", apply_function(increment, 0, 10))
     print("Decrement:", apply_function(decrement, 0, 10))
 
-    # In fact, function references behave like any other Python variable
+    # In fact, function references can be overwritten like any other Python variable
     replace_decrement()
     print("Decrement again:", apply_function(decrement, 0, 10))
 
