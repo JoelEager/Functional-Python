@@ -13,16 +13,17 @@ All you need for these examples is **Python 3.3** or newer. Just clone the repo 
 Below is a breakdown of what this repo contains. The files are listed in the recommended order for reading and working 
 through the content:
 * `slides.pdf` - Provides a general introduction to what functional programming is and how it relates to Python.
-* `functions.py` - Shows how functions in Python are also objects and what that allows you to do.
-* `decorators.py` - Demos function composition using Python decorators and nested functions.
-* `iterators.py` - Makes use of python built-ins and the `itertools` modules to show how to process data through 
+* `examples/functions.py` - Shows how functions in Python are also objects and what that allows you to do.
+* `examples/decorators.py` - Demos function composition using Python decorators and nested functions.
+* `examples/iterators.py` - Makes use of python built-ins and the `itertools` modules to show how to process data 
+through iterators.
+* `examples/comprehensions.py` - Shows an alternate use of iterators to populate Python data structures in a compact 
+and readable way.
+* `examples/custom_iterators.py` - Now that you've seen iterators from the outside it's time to create some of your own.
+* `examples/generators.py` - Demos one of the lesser known Python features that allows you to turn functions into 
 iterators.
-* `comprehensions.py` - Shows an alternate use of iterators to populate Python data structures in a compact and 
-readable way.
-* `custom_iterators.py` - Now that you've seen iterators from the outside it's time to create some of your own.
-* `generators.py` - Demos one of the lesser known Python features that allows you to turn functions into iterators.
 
 ## Further reading
 Much of the content and structure of this seminar is based on the 
-[official Python functional programming how to](https://docs.python.org/3/howto/functional.html).
+[official Python functional programming how-to](https://docs.python.org/3/howto/functional.html).
 It's a great resource so if you're looking for more check it out.
