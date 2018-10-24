@@ -15,6 +15,10 @@ def decrement(value):
     return value - 1
 
 
+def decrement_more(value):
+    return value - 10
+
+
 def apply_function(funct, value, iterations):
     for index in range(iterations):
         value = funct(value)
@@ -23,5 +27,10 @@ def apply_function(funct, value, iterations):
 
 
 if __name__ == "__main__":
+    # See how function can be passed as arguments
     print("Increment:", apply_function(increment, 0, 10))
     print("Decrement:", apply_function(decrement, 0, 10))
+
+    # In fact, function references behave like any other Python variable
+    decrement = decrement_more
+    print("Decrement again:", apply_function(decrement, 0, 10))
