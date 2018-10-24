@@ -26,11 +26,20 @@ def apply_function(funct, value, iterations):
     return value
 
 
-if __name__ == "__main__":
+def replace_decrement():
+    global decrement
+    decrement = decrement_more
+
+
+def run_demo():
     # See how function can be passed as arguments
     print("Increment:", apply_function(increment, 0, 10))
     print("Decrement:", apply_function(decrement, 0, 10))
 
     # In fact, function references behave like any other Python variable
-    decrement = decrement_more
+    replace_decrement()
     print("Decrement again:", apply_function(decrement, 0, 10))
+
+
+if __name__ == "__main__":
+    run_demo()
