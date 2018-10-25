@@ -42,6 +42,9 @@ def run_demo():
     values = list(map(square_it, filter(lambda value: value % 2 == 0, range(10))))
     print(values)
 
+    print("\nsum() is another built-in that consumes iterators")
+    print(sum(map(square_it, filter(lambda value: value % 2 == 0, range(10)))))
+
     print("\nNote that each of these calls only produce another iterator.\n"
           "To actually run them you need to consume the iterator.")
     iter_out = map(sqrt, values)
