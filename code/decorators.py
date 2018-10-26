@@ -15,6 +15,7 @@ def log_time(func):
     """
     @wraps(func)
     def wrapped_function(*args, **kwargs):
+        # The asterisks allow for any number of args and kwargs
         start = datetime.now()
 
         result = func(*args, **kwargs)
