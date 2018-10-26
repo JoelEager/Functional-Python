@@ -8,6 +8,7 @@ Docs:
 """
 
 from math import sqrt
+from itertools import chain, accumulate, permutations, combinations
 
 
 def skip_odd_numbers(value):
@@ -38,7 +39,7 @@ def run_demo():
     for index in map(square_it, filter(lambda value: value % 2 == 0, range(10))):
         print(index)
 
-    print("\nIterators can be consumed by the list constructor too")
+    print("\nIterators can be consumed by the list constructor to produce a list")
     values = list(map(square_it, filter(lambda value: value % 2 == 0, range(10))))
     print(values)
 
@@ -50,6 +51,17 @@ def run_demo():
     iter_out = map(sqrt, values)
     print(iter_out)
     print(list(iter_out))
+
+    print("\nOutout from multiple iterators can be \"merged\" using itertools.chain()")
+    odd_iter = filter(lambda value: value % 2 == 0, range(10))
+    even_iter = filter(lambda value: value % 2 == 1, range(10))
+    both_iter = chain(odd_iter, even_iter)
+    print(list(both_iter))
+
+    print("\nItertools can also help when combining elements")
+    print("Accumulation:", list(accumulate(range(5))))
+    print("Permutations:", list(permutations(range(3), 2)))
+    print("Combinations:", list(combinations(range(3), 2)))
 
 
 if __name__ == "__main__":
