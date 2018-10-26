@@ -20,8 +20,10 @@ def run_demo():
     print(a_list, a_set, a_dict, sep="\n")
 
     print("\nArbitrary expressions can go in the first part of the comprehension")
-    list_2 = [randint(index, index ** 2) for index in range(10)]
-    print(list_2)
+    print([randint(index, index ** 2) for index in range(10)])
+
+    print("\nIf the value returned from the iterator isn't used in your expression you can use a _ to discard it")
+    print([randint(0, 100) for _ in range(10)])
 
 
 if __name__ == "__main__":
