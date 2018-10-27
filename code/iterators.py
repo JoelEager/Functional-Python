@@ -8,7 +8,7 @@ Docs:
 """
 
 from math import sqrt
-from itertools import chain, accumulate, permutations, combinations
+from itertools import chain, accumulate, permutations, combinations, product
 
 
 def skip_odd_numbers(value):
@@ -52,7 +52,7 @@ def run_demo():
     print(iter_out)
     print(list(iter_out))
 
-    print("\nOutout from multiple iterators can be \"merged\" using itertools.chain()")
+    print("\nOutput from multiple iterators can be \"merged\" using itertools.chain()")
     odd_iter = filter(lambda value: value % 2 == 0, range(10))
     even_iter = filter(lambda value: value % 2 == 1, range(10))
     both_iter = chain(odd_iter, even_iter)
@@ -60,8 +60,9 @@ def run_demo():
 
     print("\nItertools can also help when combining elements")
     print("Accumulation:", list(accumulate(range(5))))
-    print("Permutations:", list(permutations(range(3), 2)))
     print("Combinations:", list(combinations(range(3), 2)))
+    print("Permutations:", list(permutations(range(3), 2)))
+    print("Permutations with repetition:", list(product(range(3), repeat=2)))
 
 
 if __name__ == "__main__":
