@@ -36,6 +36,9 @@ def replace_decrement():
     global decrement
     decrement = decrement_more
 
+    # Keep in mind that this is bad practice and only done here to show how functions are really just references
+    #   like everything else in Python
+
 
 def run_demo():
     # See how function can be passed as arguments

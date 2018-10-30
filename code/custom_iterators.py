@@ -1,5 +1,5 @@
 """
-Manually creating iterators using classes and the __next__() function.
+Manually creating iterators using a class that implements the __iter__() and __next__() functions.
 
 Docs:
     https://docs.python.org/3/tutorial/classes.html#iterators
