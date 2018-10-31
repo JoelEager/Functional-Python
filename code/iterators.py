@@ -46,6 +46,10 @@ def run_demo():
     print("\nsum() is another built-in that consumes iterators")
     print(sum(map(square_it, filter(lambda value: value % 2 == 0, range(10)))))
 
+    print("\nConstructors can also be used in map calls")
+    values = list(map(int, "5,7,2".split(",")))
+    print(values)
+
     print("\nNote that each of these calls only produces another iterator.\n"
           "To actually run them you need to consume the iterator.")
     iter_out = map(sqrt, values)
@@ -53,8 +57,8 @@ def run_demo():
     print(list(iter_out))
 
     print("\nOutput from multiple iterators can be \"merged\" using itertools.chain()")
-    odd_iter = filter(lambda value: value % 2 == 0, range(10))
-    even_iter = filter(lambda value: value % 2 == 1, range(10))
+    odd_iter = filter(lambda value: value % 2 == 1, range(10))
+    even_iter = filter(lambda value: value % 2 == 0, range(10))
     both_iter = chain(odd_iter, even_iter)
     print(list(both_iter))
 
